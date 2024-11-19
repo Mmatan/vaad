@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שריינו את מועדון הדיירים</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e7f9ff;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #ff6347; /* צבע עיקרי */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input, button {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #ff4500; /* צבע לחצן כאשר עכבר מעליו */
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>שריינו את מועדון הדיירים</h1>
+    <p>אנא מלאו את הפרטים למטה כדי לשריין את מועדון הדיירים בתאריך ובשעה הרצויים.</p>
+    
+    <form action="http://localhost/reserve.php" method="POST">
+        <label for="name">שם:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="date">תאריך:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">שעה:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="details">פרטים נוספים:</label>
+        <input type="text" id="details" name="details">
+
+        <button type="submit">שריין עכשיו</button>
+    </form>
+</div>
+
+<a href="reservations.php">הצג את כל ההזמנות</a>
+
+</body>
+</html>
